@@ -134,4 +134,4 @@ Official builds forward measured trainer power without multiplying it. Modified 
 
 ## License
 
-Documentation and distributed binaries are provided under the terms in [LICENSE.md](LICENSE.md). Third-party components are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Documentation and distributed binaries are provided under the terms in [LICENSE.md](LICENSE.md). Third-party components are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), with full license texts in [`licenses/`](licenses/).
