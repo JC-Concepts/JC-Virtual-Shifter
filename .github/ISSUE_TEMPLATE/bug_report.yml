@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a problem with an official release
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use this for bugs in official releases. Do not report security issues here; see SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Release version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: board
+    attributes:
+      label: Board
+      options:
+        - ESP32-WROOM-32
+        - Waveshare ESP32-S3 Zero
+        - LOLIN S3 Mini / other S3
+        - LOLIN C3 Mini
+        - ESP32-C3 Super Mini
+        - Not board-related
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11 / macOS 15"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true

@@ -1,0 +1,28 @@
+# Release binaries are published as GitHub Release assets, never committed here.
+*.bin
+*.elf
+*.map
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.app
+*.p12
+*.pfx
+*.key
+*.pem
+*.env
+*.env.*
+
+# Local build output
+build/
+dist/
+node_modules/
+target/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
