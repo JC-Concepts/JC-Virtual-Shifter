@@ -10,9 +10,7 @@ Download the release asset whose suffix matches your board from the [latest rele
 | :--- | :--- |
 | ESP32-WROOM-32 / classic DevKit | `esp32-wroom` |
 | Waveshare ESP32-S3 Zero | `esp32-s3-zero` |
-| LOLIN S3 Mini and other S3 boards | `esp32-s3-generic` |
 | LOLIN C3 Mini | `esp32-c3-mini` |
-| ESP32-C3 Super Mini / generic C3 | `esp32-c3-supermini` |
 
 Each release publishes either a `merged.bin` image or a set of split images (`bootloader.bin`, `partitions.bin`, `app.bin`). Verify the hash against `SHA256SUMS.txt` before flashing. See [verifying downloads](../README.md#verifying-downloads).
 

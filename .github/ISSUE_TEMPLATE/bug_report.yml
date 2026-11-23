@@ -21,9 +21,7 @@ body:
       options:
         - ESP32-WROOM-32
         - Waveshare ESP32-S3 Zero
-        - LOLIN S3 Mini / other S3
         - LOLIN C3 Mini
-        - ESP32-C3 Super Mini
         - Not board-related
     validations:
       required: true

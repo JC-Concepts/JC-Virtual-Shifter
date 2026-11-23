@@ -46,9 +46,7 @@ Download the matching firmware image from the [latest release](../../releases/la
 | :--- | :--- | :--- | :--- |
 | `esp32-wroom` | ESP32-WROOM-32 / classic DevKit | GPIO 18 | GPIO 5 |
 | `esp32-s3-zero` | Waveshare ESP32-S3 Zero | GPIO 4 | GPIO 5 |
-| `esp32-s3-generic` | LOLIN S3 Mini and other S3 boards | GPIO 4 | GPIO 5 |
 | `esp32-c3-mini` | LOLIN C3 Mini | GPIO 7 | GPIO 5 |
-| `esp32-c3-supermini` | ESP32-C3 Super Mini / generic C3 | GPIO 7 | GPIO 5 |
 
 The pins above are built into the official images. No code edits are needed. See [wiring](docs/wiring.md) for LED pins, strapping-pin cautions, and assembly notes.
 

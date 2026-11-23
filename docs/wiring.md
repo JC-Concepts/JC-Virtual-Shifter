@@ -19,9 +19,7 @@ No external resistors are needed: the firmware enables the ESP32's internal pull
 | :--- | :--- | :--- |
 | ESP32-WROOM-32 / classic DevKit | GPIO 18 | GPIO 5 |
 | Waveshare ESP32-S3 Zero | GPIO 4 | GPIO 5 |
-| LOLIN S3 Mini / other S3 boards | GPIO 4 | GPIO 5 |
 | LOLIN C3 Mini | GPIO 7 | GPIO 5 |
-| ESP32-C3 Super Mini / generic C3 | GPIO 7 | GPIO 5 |
 
 Connect one side of each button to the listed GPIO and the other side to `GND`. A press pulls the pin low.
 
@@ -30,9 +28,7 @@ Connect one side of each button to the listed GPIO and the other side to `GND`. 
 | Board | LED pin | Type |
 | :--- | :--- | :--- |
 | ESP32-WROOM-32 / DevKit | GPIO 2 | Single colour, active HIGH |
-| ESP32-C3 Super Mini | GPIO 8 | Single colour, active LOW |
 | LOLIN C3 Mini | GPIO 7 | Shares Shift Up; firmware disables this LED |
-| LOLIN S3 Mini | GPIO 47 (`RGB_BUILTIN`) | WS2812 RGB |
 | Waveshare ESP32-S3 Zero | GPIO 21 (`WS_RGB`) | WS2812 RGB |
 
 LED states:
