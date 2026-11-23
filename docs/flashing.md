@@ -16,7 +16,7 @@ Release assets are merged images (`*-merged.bin`): bootloader, partition table, 
 
 ## 2. Recommended: flash with the desktop app
 
-You do not need Python, esptool, or command-line tools.
+You do not need Python or command-line tools.
 
 1. Install the [desktop app](desktop-app.md) from the same release.
 2. Connect the ESP32 to your computer with a **data-capable** USB cable.
@@ -28,35 +28,7 @@ You do not need Python, esptool, or command-line tools.
 
 The app disconnects any active session, detects the connected chipset, checks that it matches the image, writes the image at offset `0x0`, and resets the board. Do not unplug the board while the progress bar is active. If the board does not reset automatically, press its RESET button, or hold BOOT when starting the flash.
 
-## 3. Advanced: flash with esptool
-
-Use this only if the desktop app cannot access the USB port.
-
-```bash
-python -m pip install --upgrade esptool
-```
-
-Then flash the merged image at offset `0x0`:
-
-```bash
-python -m esptool --chip <chip> --port <port> --baud 921600 write_flash 0x0 JC_Virtual_Shifter-<version>-<suffix>-merged.bin
-```
-
-| Board | `--chip` value | Example port |
-| :--- | :--- | :--- |
-| ESP32-WROOM-32 | `esp32` | `COM3` / `/dev/cu.usbserial-*` |
-| Waveshare ESP32-S3 Zero | `esp32s3` | `COM3` / `/dev/cu.usbmodem*` |
-| LOLIN C3 Mini | `esp32c3` | `COM3` / `/dev/cu.usbmodem*` |
-
-If a release ever provides split images instead of a merged image, use these offsets:
-
-| Chip | Bootloader | Partition table | Application |
-| :--- | :--- | :--- | :--- |
-| ESP32 (WROOM) | `0x1000` | `0x8000` | `0x10000` |
-| ESP32-S3 | `0x0` | `0x8000` | `0x10000` |
-| ESP32-C3 | `0x0` | `0x8000` | `0x10000` |
-
-## 4. After flashing
+## 3. After flashing
 
 - The board restarts and begins advertising over Bluetooth LE.
 - Connect the desktop app over USB and pair your trainer. See [desktop app](desktop-app.md).

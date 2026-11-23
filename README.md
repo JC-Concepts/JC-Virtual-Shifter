@@ -21,6 +21,12 @@ Official builds are published on the [Releases page](../../releases). Each relea
 
 See [Verifying downloads](#verifying-downloads) below.
 
+### Like this Project?
+
+You can buy me a gel, coffee, or inner tube. Your support helps me further develop on these types of projects.
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RE2GQDK8CD2WW)
+
 ---
 
 ## What you need
@@ -56,7 +62,7 @@ The pins above are built into the official images. No code edits are needed. See
 
 1. **Wire two buttons** to the pins for your board. See [wiring](docs/wiring.md).
 2. **Download and verify** the firmware image and desktop installer from [Releases](../../releases/latest).
-3. **Flash the firmware** with esptool. See [flashing](docs/flashing.md).
+3. **Flash the firmware** with the desktop app. See [flashing](docs/flashing.md).
 4. **Install the desktop app** on Windows or macOS. See [desktop app](docs/desktop-app.md).
 5. **Connect over USB**, scan for your trainer, and pair it in the app.
 6. **Pair the shifter in your riding app** as both power source and controllable trainer.
@@ -115,14 +121,6 @@ In SIM/route mode, changing gear changes the resistance you feel. In ERG mode, y
 ## Fair use
 
 Official builds forward measured trainer power without multiplying it. Modified firmware is unsupported and may violate the rules of a riding platform or event. See [FAIR_USE.md](FAIR_USE.md).
-
----
-
-## Like this Project?
-
-You can buy me a gel, coffee, or inner tube. Your support helps me further develop on these types of projects.
-
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RE2GQDK8CD2WW)
 
 ---
 
