@@ -118,6 +118,14 @@ Official builds forward measured trainer power without multiplying it. Modified 
 
 ---
 
+## Like this Project?
+
+You can buy me a gel, coffee, or inner tube. Your support helps me further develop on these types of projects.
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RE2GQDK8CD2WW)
+
+---
+
 ## Support and security
 
 - Questions and bug reports: [Issues](../../issues)
