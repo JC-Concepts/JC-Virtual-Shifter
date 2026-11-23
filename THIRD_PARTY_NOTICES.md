@@ -69,7 +69,7 @@ Other license expressions are attributed below with an upstream URL. Where a com
 | NimBLE-Arduino | 2.5.2 | Apache-2.0 | https://github.com/h2zero/NimBLE-Arduino |
 | Bounce2 | 2.71 | MIT | https://github.com/thomasfredericks/Bounce2 |
 
-The Arduino-ESP32 core is LGPL-2.1-or-later and is statically linked into the firmware image. See `LGPL_COMPLIANCE.md` in the private release package.
+The Arduino-ESP32 core is LGPL-2.1-or-later and is statically linked into the firmware image. Each release includes an LGPL relink package with object files, a written source offer, and the captured linker command. See `LGPL_COMPLIANCE.md` in the private release package.
 
 ## Desktop application - Rust crates
 
