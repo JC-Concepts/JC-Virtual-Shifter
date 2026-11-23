@@ -1,8 +1,8 @@
-> **DRAFT — complete this from the release SBOM before the first binary release.**
-
 # Third-party notices
 
 Official JC Virtual Shifter binaries include third-party components. Their licenses and notices apply to those components and are not replaced by the project license.
+
+This list is updated for each binary release. The authoritative list for a specific build is the SBOM published with that release.
 
 | Component | Used in | License | Upstream |
 | :--- | :--- | :--- | :--- |

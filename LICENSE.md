@@ -1,7 +1,6 @@
-> **DRAFT — legal review required before this repository is made public.**
-> Replace this file with the final license decision before the first push.
-
 # License
+
+Effective: 2026-11-23
 
 Copyright (c) 2026 JC Concepts. All rights reserved.
 
