@@ -29,6 +29,22 @@ You can buy me a gel, coffee, or inner tube. Your support helps me further devel
 
 ---
 
+## How it works
+
+The shifter connects to your smart trainer over Bluetooth LE and presents itself to your riding app as a standard FTMS trainer with power, cadence, and controllable resistance. The desktop app connects over USB or Wi-Fi for setup and telemetry, and the two handlebar buttons select a virtual gear. Measured power is passed through unchanged; only resistance and simulation commands are scaled by the active gear.
+
+## What you get
+
+- **Discrete virtual gears** — gear 1 is the easiest, the highest gear is the hardest, and Shift Up makes pedalling harder.
+- **2x virtual front derailleur** — press both shift buttons within 50 ms to toggle between a small and large virtual chainring.
+- **Physical shift buttons** — two momentary switches wired directly to the ESP32, with software debouncing.
+- **Works in ERG and SIM modes** — gears change resistance and simulated grade in SIM mode; ERG target power stays under your app's control.
+- **USB and Wi-Fi control** — USB for first-time setup, or Wi-Fi for a cable-free ride while Bluetooth stays dedicated to the trainer and riding app.
+- **Persistent settings** — drivetrain settings and the paired trainer are saved across power cycles.
+- **Desktop app** — configure the drivetrain, build a virtual cassette, inspect live telemetry, and run a floating HUD over your ride.
+
+---
+
 ## What you need
 
 | Item | Notes |
@@ -41,6 +57,23 @@ You can buy me a gel, coffee, or inner tube. Your support helps me further devel
 | Computer | Windows or macOS for the desktop app. |
 
 A power-only trainer can still report power and cadence, but gears will not change resistance.
+
+### Trainer compatibility
+
+- **FTMS trainers** — resistance and simulation commands are scaled by the active virtual gear.
+- **FE-C trainers** — supported through the BLE-carried FE-C service, including wind and track resistance.
+- **Power-only trainers** — power and cadence can be forwarded, but there is no resistance control to scale. Gears will not change effort.
+
+Pair the trainer in the desktop app first. The app highlights devices that advertise FTMS or FE-C.
+
+### Riding app compatibility
+
+JC Virtual Shifter works with riding apps that can pair a standard Bluetooth LE FTMS trainer or power meter, including TrainingPeaks Virtual, Zwift, MyWhoosh, and Rouvy. No app-specific plugin or driver is required.
+
+- The app must use Bluetooth LE. Apps that only support ANT+ FE-C will not see the shifter.
+- Gear changes are felt in SIM/route mode, where the app sends grade and resistance commands.
+- ERG workouts stay under the app's target-power control.
+- In firmware output and some parts of the desktop app, the connected riding app is labelled **TPV**. That is a legacy label and applies to whichever app is connected.
 
 ---
 
@@ -103,6 +136,38 @@ The desktop app connects over USB serial, Wi-Fi, or Bluetooth LE setup and provi
 - drivetrain and virtual cassette configuration,
 - live diagnostics,
 - an always-on-top HUD showing gear, ratio, and connection state.
+
+The screenshots below show a fresh install before a device is connected.
+
+### Connections
+
+Use this page to connect over USB, discover a shifter over Wi-Fi, scan for your trainer, and launch the HUD.
+
+![Connections page](docs/images/desktop-connections.png)
+
+### Drivetrain
+
+Set the physical chainring and cog baseline, wheel circumference, virtual chainrings, and 2x front shifting here.
+
+![Drivetrain page](docs/images/desktop-drivetrain.png)
+
+### Gear Ratios & Presets
+
+Pick a cassette preset or edit cog teeth and ratios. Gear 1 is always the easiest.
+
+![Gear Ratios page](docs/images/desktop-gear-ratios.png)
+
+### Diagnostics & Telemetry
+
+Check control mode, gear, ratio, power, cadence, and connection state, or run maintenance commands.
+
+![Diagnostics page](docs/images/desktop-diagnostics.png)
+
+### HUD
+
+The always-on-top overlay shows the current gear, ring, ratio, and connection state while you ride.
+
+![HUD overlay](docs/images/desktop-hud.png)
 
 Installers are currently **unsigned**. Windows SmartScreen and macOS Gatekeeper may warn on first launch; see [troubleshooting](docs/troubleshooting.md#installer-warnings).
 

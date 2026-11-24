@@ -1,6 +1,6 @@
 # Third-party notices
 
-This file is generated from `licensing/firmware-components.json`, `Desktop_App/src-tauri/Cargo.lock`, and `Desktop_App/package-lock.json` by `licensing/generate_sbom.mjs`. The authoritative machine-readable inventory for the release is `SBOM.json`.
+This file is generated from the release inventory and dependency lockfiles. The authoritative machine-readable inventory for the release is `SBOM.json`.
 
 JC Virtual Shifter firmware and desktop binaries include third-party components. Their licenses and notices apply to those components and are not replaced by the JC Concepts proprietary license.
 
