@@ -87,10 +87,11 @@ Get-Content .\SHA256SUMS.txt
 
 ```bash
 shasum -a 256 -c SHA256SUMS.txt
+gpg --import JC-Virtual-Shifter-release-public.asc
 gpg --verify SHA256SUMS.txt.sig SHA256SUMS.txt
 ```
 
-The signing key fingerprint is published in the release notes. A matching hash confirms the file has not changed; the signature confirms it was produced by the release maintainer. Neither proves anything about firmware running on a board that someone else has flashed.
+The release includes the public key as `JC-Virtual-Shifter-release-public.asc`, and its fingerprint is published in the release notes. Confirm the fingerprint shown by `gpg --verify` matches the one in the release notes. A matching hash confirms the file has not changed; the signature confirms it was produced by the release maintainer. Neither proves anything about firmware running on a board that someone else has flashed.
 
 ---
 
