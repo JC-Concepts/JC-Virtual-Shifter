@@ -6,7 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-First public release package is being prepared. Download assets will appear on the [Releases page](../../releases).
+No unreleased changes.
+
+## [0.1.1] - 2026-11-26
+
+### Fixed
+
+- **USB gear display on ESP32-S3 Zero**: official S3 firmware now enables native USB on boot, so gear changes are delivered over USB as well as Wi-Fi.
+- **USB connection reliability**: the desktop app ignores stale serial data after reconnecting, preventing old gear state from reappearing.
+- **Gear telemetry over USB**: periodic gear state is now sent to every connected transport, so the HUD stays in sync over USB, Wi-Fi, and Bluetooth serial.
+
+### Changed
+
+- Firmware and desktop builds now report version `0.1.1`. Rebuilt desktop installers are included in this release.
 
 ## [0.1.0] - 2026-11-20
 
