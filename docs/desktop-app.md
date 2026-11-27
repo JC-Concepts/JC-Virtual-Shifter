@@ -4,7 +4,7 @@ The desktop app configures the shifter, shows live telemetry, and provides an al
 
 ## Install
 
-Download and verify the release ZIP from the [latest release](../../releases/latest), then open `Desktop/Windows` or `Desktop/macOS` inside it. Current installers are unsigned; see [installer warnings](troubleshooting.md#installer-warnings).
+Download and verify the release ZIP from the [latest release](../../releases/latest), then open `Desktop/Windows` or `Desktop/macOS` inside it. For v0.1.1 and earlier, download the Windows or macOS installer asset directly. Current installers are unsigned; see [installer warnings](troubleshooting.md#installer-warnings).
 
 The app uses USB serial, Wi-Fi, and Bluetooth LE locally. See [PRIVACY.md](../PRIVACY.md).
 

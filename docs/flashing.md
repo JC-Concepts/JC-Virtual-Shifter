@@ -4,7 +4,7 @@ Always flash the image that matches your board. The desktop app checks the conne
 
 ## 1. Get the image
 
-Download and verify the release ZIP from the [latest release](../../releases/latest), then extract it. See [verifying downloads](../README.md#verifying-downloads).
+Download and verify the release ZIP from the [latest release](../../releases/latest), then extract it. See [verifying downloads](../README.md#verifying-downloads). For v0.1.1 and earlier, download the individual `*-merged.bin` release asset instead.
 
 Open the `Firmware/` folder and choose the folder that matches your board:
 

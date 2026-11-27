@@ -12,7 +12,7 @@ Shift up to make pedalling harder, shift down to make it easier, even on a train
 
 This repository is the **public support and download home** for JC Virtual Shifter. It contains user documentation, release notes, and links to official download assets. It does **not** contain firmware or desktop application source code.
 
-Official builds are published on the [Releases page](../../releases). Starting with version 0.1.1, each release includes:
+Official builds are published on the [Releases page](../../releases). New releases after v0.1.1 include:
 
 - one `JC-Virtual-Shifter-<version>.zip` containing the desktop installers, firmware images, and compliance files in clearly named folders,
 - a `SHA256SUMS.txt` file and a detached signature for that ZIP,
@@ -79,7 +79,7 @@ JC Virtual Shifter works with riding apps that can pair a standard Bluetooth LE 
 
 ## Supported boards
 
-Download the release ZIP from the [latest release](../../releases/latest), extract it, then choose the matching folder under `Firmware/`.
+Download the release ZIP from the [latest release](../../releases/latest), extract it, then choose the matching folder under `Firmware/`. In v0.1.1 and earlier, the firmware images are individual release assets with these same suffixes.
 
 | Folder suffix | Board | Shift Up | Shift Down |
 | :--- | :--- | :--- | :--- |
@@ -107,7 +107,9 @@ Pressing both buttons within 50 ms toggles the virtual front chainring when 2x f
 
 ## Verifying downloads
 
-Download the release ZIP, `SHA256SUMS.txt`, `SHA256SUMS.txt.sig`, and `JC-Virtual-Shifter-release-public.asc` into the same folder. Verify the ZIP **before** extracting it.
+For new releases, download the release ZIP, `SHA256SUMS.txt`, `SHA256SUMS.txt.sig`, and `JC-Virtual-Shifter-release-public.asc` into the same folder. Verify the ZIP **before** extracting it.
+
+For v0.1.1 and earlier, `SHA256SUMS.txt` lists the individual assets instead. Download the files you need plus the checksum, signature, and public key, then run the same commands from that folder.
 
 **Windows (PowerShell):**
 
@@ -126,7 +128,7 @@ gpg --verify SHA256SUMS.txt.sig SHA256SUMS.txt
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-`SHA256SUMS.txt` contains the hash of the ZIP, so it must be checked before extraction. The release public key and its fingerprint are published with the release. Confirm the fingerprint shown by `gpg --verify` matches the one in the release notes. A matching hash confirms the ZIP has not changed; the signature confirms it was produced by the release maintainer. Neither proves anything about firmware running on a board that someone else has flashed.
+For bundled releases, `SHA256SUMS.txt` contains the hash of the ZIP, so it must be checked before extraction. The release public key and its fingerprint are published with the release. Confirm the fingerprint shown by `gpg --verify` matches the one in the release notes. A matching hash confirms the downloaded file has not changed; the signature confirms it was produced by the release maintainer. Neither proves anything about firmware running on a board that someone else has flashed.
 
 ---
 
