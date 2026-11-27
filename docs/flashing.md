@@ -4,25 +4,27 @@ Always flash the image that matches your board. The desktop app checks the conne
 
 ## 1. Get the image
 
-Download the release asset whose suffix matches your board from the [latest release](../../releases/latest):
+Download and verify the release ZIP from the [latest release](../../releases/latest), then extract it. See [verifying downloads](../README.md#verifying-downloads).
 
-| Board | Asset suffix | Chip |
+Open the `Firmware/` folder and choose the folder that matches your board:
+
+| Board | Firmware folder | Chip |
 | :--- | :--- | :--- |
-| ESP32-WROOM-32 / classic DevKit | `esp32-wroom` | ESP32 |
-| Waveshare ESP32-S3 Zero | `esp32-s3-zero` | ESP32-S3 |
-| LOLIN C3 Mini | `esp32-c3-mini` | ESP32-C3 |
+| ESP32-WROOM-32 / classic DevKit | `ESP32-WROOM-32` | ESP32 |
+| Waveshare ESP32-S3 Zero | `ESP32-S3-Zero` | ESP32-S3 |
+| LOLIN C3 Mini | `LOLIN-C3-Mini` | ESP32-C3 |
 
-Release assets are merged images (`*-merged.bin`): bootloader, partition table, and application in one file. Verify the hash against `SHA256SUMS.txt` before flashing. See [verifying downloads](../README.md#verifying-downloads).
+Each folder contains a merged image (`*-merged.bin`): bootloader, partition table, and application in one file, plus a `.sha256` sidecar. The signed `SHA256SUMS.txt` on the release page verifies the ZIP before extraction. See [verifying downloads](../README.md#verifying-downloads).
 
 ## 2. Recommended: flash with the desktop app
 
 You do not need Python or command-line tools.
 
-1. Install the [desktop app](desktop-app.md) from the same release.
+1. Install the [desktop app](desktop-app.md) from `Desktop/Windows` or `Desktop/macOS` in the extracted ZIP.
 2. Connect the ESP32 to your computer with a **data-capable** USB cable.
 3. Open **Diagnostics → ESP32 firmware flash**.
 4. Select the serial port for your board. Click the refresh button if it is not listed.
-5. Click **Select firmware (.bin)** and choose the downloaded `*-merged.bin` file.
+5. Click **Select firmware (.bin)** and choose the `*-merged.bin` file from the matching `Firmware/` folder.
 6. Optional: click **Detect device chip** to confirm the board chipset before flashing.
 7. Click **Flash selected firmware** and confirm the prompt.
 

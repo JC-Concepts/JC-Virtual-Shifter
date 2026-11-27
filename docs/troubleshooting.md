@@ -38,8 +38,8 @@
 
 Official installers are currently unsigned.
 
-- **Windows:** SmartScreen may show "Windows protected your PC". Choose **More info → Run anyway** only if the file came from this project's Releases page and its hash matches `SHA256SUMS.txt`.
-- **macOS:** Gatekeeper may say the app cannot be opened. If you downloaded it from the official release and verified the hash, right-click the app and choose **Open**, or remove the quarantine attribute:
+- **Windows:** SmartScreen may show "Windows protected your PC". Choose **More info → Run anyway** only if the installer came from an official release ZIP you verified with `SHA256SUMS.txt` before extraction.
+- **macOS:** Gatekeeper may say the app cannot be opened. If you downloaded the official release ZIP and verified it, right-click the app and choose **Open**, or remove the quarantine attribute:
 
   ```bash
   xattr -d com.apple.quarantine /path/to/JC\ Virtual\ Shifter.app

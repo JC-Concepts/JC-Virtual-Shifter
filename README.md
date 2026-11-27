@@ -12,12 +12,12 @@ Shift up to make pedalling harder, shift down to make it easier, even on a train
 
 This repository is the **public support and download home** for JC Virtual Shifter. It contains user documentation, release notes, and links to official download assets. It does **not** contain firmware or desktop application source code.
 
-Official builds are published on the [Releases page](../../releases). Each release includes:
+Official builds are published on the [Releases page](../../releases). Starting with version 0.1.1, each release includes:
 
-- firmware images for supported boards,
-- Windows and macOS desktop installers,
-- a `SHA256SUMS.txt` file and a detached signature,
-- a release manifest with version and build identifier.
+- one `JC-Virtual-Shifter-<version>.zip` containing the desktop installers, firmware images, and compliance files in clearly named folders,
+- a `SHA256SUMS.txt` file and a detached signature for that ZIP,
+- the release public key used to check the signature,
+- a release manifest inside the ZIP with version and build identifier.
 
 See [Verifying downloads](#verifying-downloads) below.
 
@@ -79,9 +79,9 @@ JC Virtual Shifter works with riding apps that can pair a standard Bluetooth LE 
 
 ## Supported boards
 
-Download the matching firmware image from the [latest release](../../releases/latest).
+Download the release ZIP from the [latest release](../../releases/latest), extract it, then choose the matching folder under `Firmware/`.
 
-| Release asset suffix | Board | Shift Up | Shift Down |
+| Folder suffix | Board | Shift Up | Shift Down |
 | :--- | :--- | :--- | :--- |
 | `esp32-wroom` | ESP32-WROOM-32 / classic DevKit | GPIO 18 | GPIO 5 |
 | `esp32-s3-zero` | Waveshare ESP32-S3 Zero | GPIO 4 | GPIO 5 |
@@ -94,9 +94,9 @@ The pins above are built into the official images. No code edits are needed. See
 ## Quick start
 
 1. **Wire two buttons** to the pins for your board. See [wiring](docs/wiring.md).
-2. **Download and verify** the firmware image and desktop installer from [Releases](../../releases/latest).
-3. **Flash the firmware** with the desktop app. See [flashing](docs/flashing.md).
-4. **Install the desktop app** on Windows or macOS. See [desktop app](docs/desktop-app.md).
+2. **Download and verify** the release ZIP from [Releases](../../releases/latest), then extract it.
+3. **Install the desktop app** from `Desktop/Windows` or `Desktop/macOS`. See [desktop app](docs/desktop-app.md).
+4. **Flash the firmware** from the matching `Firmware/` folder with the desktop app. See [flashing](docs/flashing.md).
 5. **Connect over USB**, scan for your trainer, and pair it in the app.
 6. **Pair the shifter in your riding app** as both power source and controllable trainer.
 7. **Ride and shift.** Gear 1 is the easiest; Shift Up makes pedalling harder.
@@ -107,24 +107,26 @@ Pressing both buttons within 50 ms toggles the virtual front chainring when 2x f
 
 ## Verifying downloads
 
-Every release publishes `SHA256SUMS.txt` and a detached signature.
+Download the release ZIP, `SHA256SUMS.txt`, `SHA256SUMS.txt.sig`, and `JC-Virtual-Shifter-release-public.asc` into the same folder. Verify the ZIP **before** extracting it.
 
 **Windows (PowerShell):**
 
 ```powershell
-Get-FileHash .\JC_Virtual_Shifter-<version>-esp32-wroom-merged.bin -Algorithm SHA256
+Get-FileHash .\JC-Virtual-Shifter-<version>.zip -Algorithm SHA256
 Get-Content .\SHA256SUMS.txt
 ```
+
+Compare the hash printed by PowerShell with the hash in `SHA256SUMS.txt`.
 
 **macOS / Linux:**
 
 ```bash
-shasum -a 256 -c SHA256SUMS.txt
 gpg --import JC-Virtual-Shifter-release-public.asc
 gpg --verify SHA256SUMS.txt.sig SHA256SUMS.txt
+shasum -a 256 -c SHA256SUMS.txt
 ```
 
-The release includes the public key as `JC-Virtual-Shifter-release-public.asc`, and its fingerprint is published in the release notes. Confirm the fingerprint shown by `gpg --verify` matches the one in the release notes. A matching hash confirms the file has not changed; the signature confirms it was produced by the release maintainer. Neither proves anything about firmware running on a board that someone else has flashed.
+`SHA256SUMS.txt` contains the hash of the ZIP, so it must be checked before extraction. The release public key and its fingerprint are published with the release. Confirm the fingerprint shown by `gpg --verify` matches the one in the release notes. A matching hash confirms the ZIP has not changed; the signature confirms it was produced by the release maintainer. Neither proves anything about firmware running on a board that someone else has flashed.
 
 ---
 

@@ -19,6 +19,7 @@ No unreleased changes.
 ### Changed
 
 - Firmware and desktop builds now report version `0.1.1`. Rebuilt desktop installers are included in this release.
+- Downloads are now provided as one structured ZIP instead of many individual files, with `Desktop/Windows`, `Desktop/macOS`, `Firmware/<board>`, and `Compliance` folders. Verify the ZIP before extracting it.
 
 ## [0.1.0] - 2026-11-20
 
