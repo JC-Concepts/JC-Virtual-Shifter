@@ -14,6 +14,7 @@ No unreleased changes.
 
 - Release downloads are now provided as one structured ZIP with `Desktop/Windows`, `Desktop/macOS`, `Firmware/<board>`, and `Compliance` folders. Verify the ZIP before extracting it.
 - Firmware and desktop builds report version `0.1.2`. This release only changes packaging and version reporting; behavior is unchanged from 0.1.1.
+- Existing 0.1.1 firmware and desktop installs continue to work. No re-flash is required for behavior; install 0.1.2 for the new ZIP layout or updated version reporting.
 
 ## [0.1.1] - 2026-11-26
 
