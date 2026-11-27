@@ -6,9 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+No unreleased changes.
+
+## [0.1.2] - 2026-11-26
+
 ### Changed
 
-- Upcoming release downloads will be published as one structured ZIP instead of many individual files.
+- Release downloads are now provided as one structured ZIP with `Desktop/Windows`, `Desktop/macOS`, `Firmware/<board>`, and `Compliance` folders. Verify the ZIP before extracting it.
+- Firmware and desktop builds report version `0.1.2`. This release only changes packaging and version reporting; behavior is unchanged from 0.1.1.
 
 ## [0.1.1] - 2026-11-26
 
